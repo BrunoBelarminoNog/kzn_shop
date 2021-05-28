@@ -13,7 +13,7 @@ function Home() {
       <HomeContainer>
         <ProductsListWrapper>
           {products.map((product, index) => {
-            return <Product product={product} key={index} />;
+            return <Product product={product} key={index} />
           })}
         </ProductsListWrapper>
       </HomeContainer>

@@ -61,5 +61,7 @@ h1, h2, h3 {
 
 body {
 	background-color: var(--white-2);
+	overflow-x: hidden;
+
 }
 `;

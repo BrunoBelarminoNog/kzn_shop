@@ -54,3 +54,19 @@ export const CartWrapper = styled.div`
         top: 18px;
     }
 `;
+
+export const IndicatorQuantity = styled.span`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: var(--white);
+    position: absolute;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 14px;
+    left: 16px
+`;
