@@ -1,4 +1,4 @@
-import {ADD_PRODUCTONCART, REMOVE_PRODUCTONCART, POSITION_CART} from './actionsTypes';
+import {ADD_PRODUCTONCART, REMOVE_PRODUCTONCART} from './actionsTypes';
 
 export const addToCart = (payload) => ({
     type: ADD_PRODUCTONCART,
@@ -9,9 +9,3 @@ export const removeFromCart = (payload) => ({
     type: REMOVE_PRODUCTONCART,
     payload
 })
-
-export const positionCart = (payload) => ({
-    type: POSITION_CART,
-    payload
-})
-

@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
     align-items: center;
     justify-content: center;
     background-color: var(--black);
-    border-bottom: 1px solid var(--gray);
+    border-bottom: 1px solid var(--darkgray);
     position: fixed;
     top: 0;
     right: 0;
@@ -29,7 +29,6 @@ export const ContentWrapper = styled.div`
         font-size: 1.2rem;
     }
 
-    
 
     @media screen and (min-width: 540px) {
         height: 62px;

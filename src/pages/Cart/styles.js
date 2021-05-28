@@ -33,6 +33,27 @@ export const CartListWrapper = styled.div`
 `;
 
 export const ListWrapper = styled.section`
+  > h2 {
+    width: 100%;
+    text-align: center;
+    padding: 3rem 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    border-top: 2px solid var(--gray-2);
+    color: var(--gray-3);
+
+    a {
+      color: var(--darkgray-2);
+      transition: all 200ms;
+      border-bottom: 1px solid var(--white-3);
+
+
+      &:hover {
+        border-bottom: 1px solid var(--darkgray);
+      }
+    }
+  }
+
   ul {
     display: flex;
     flex-direction: column;

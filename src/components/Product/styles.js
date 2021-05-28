@@ -16,6 +16,7 @@ export const ProductCard = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 0.5rem;
+    position: relative;
 
     img {
       height: 140px;
@@ -74,9 +75,18 @@ export const ProductCard = styled.div`
     }
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 2px 2px 10px 2px var(--gray);
     }
   
   }
+`;
+
+export const ImageAnimation = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 200;
 `;

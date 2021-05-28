@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  AddSubQuantityWrapper,
-  CartContainer,
-  CartListWrapper,
-  ListWrapper,
-  SummaryWrapper,
-} from "./styles";
+import { Link } from "react-router-dom";
 import {
   RiAddFill,
   RiSubtractFill,
@@ -13,12 +7,20 @@ import {
   RiPercentFill,
   RiMapPin3Fill,
 } from "react-icons/ri";
-import { useSelector,  useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
 import {
   addToCartThunk,
   removeAllFromCartThunk,
   removeFromCartThunk,
 } from "../../store/modules/cart/thunk";
+import {
+  AddSubQuantityWrapper,
+  CartContainer,
+  CartListWrapper,
+  ListWrapper,
+  SummaryWrapper,
+} from "./styles";
 import formatValue from "../../utils/formatValue";
 
 function Cart() {
@@ -27,15 +29,17 @@ function Cart() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
 
-
   useEffect(() => {
-    let totalP = cart.reduce((acc, product) =>  acc + (product.price * product.quantity), 0)
-    setTotalPrice(totalP)
+    let totalP = cart.reduce(
+      (acc, product) => acc + product.price * product.quantity,
+      0
+    );
+    setTotalPrice(totalP);
 
-    let totalI = cart.reduce((acc, product) => acc + product.quantity, 0)
-    setTotalItems(totalI)
+    let totalI = cart.reduce((acc, product) => acc + product.quantity, 0);
+    setTotalItems(totalI);
 
-     // eslint-disable-next-line 
+    // eslint-disable-next-line
   }, [cart]);
 
   return (
@@ -43,46 +47,62 @@ function Cart() {
       <CartListWrapper>
         <div>
           <h1>Carrinho de compras</h1>
-          <span>{totalItems} {`ITEM${totalItems > 1 ? "S" : ""}`}</span>
+          <span>
+            {totalItems} {`ITEM${totalItems > 1 ? "S" : ""}`}
+          </span>
         </div>
         <ListWrapper>
-          <ul>
-            {cart.map((product) => {
-              return (
-                <li key={product.idCart}>
-                  <div>
-                    <img src={product.img} alt="" />
-                  </div>
-                  <div>
-                    <p>{product.name}</p>
-                  </div>
-                  <div>
-                    <AddSubQuantityWrapper>
-                      <div onClick={() => dispatch(removeFromCartThunk(product))}>
-                        <RiSubtractFill />
-                      </div>
-                      <div>{product.quantity}</div>
-                      <div onClick={() => dispatch(addToCartThunk(product))}>
-                        <RiAddFill />
-                      </div>
-                    </AddSubQuantityWrapper>
-                  </div>
-                  <div>
-                    <span>{formatValue(product.price * product.quantity)}</span>
-                  </div>
-                  <div onClick={() => dispatch(removeAllFromCartThunk(product.id))}>
-                    <RiCloseFill size={22} />
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+          {cart.length === 0 ? (
+            <h2><Link to="/">Clique aqui</Link> para voltar na loja e adicione algo no carrinho!</h2>
+          ) : (
+            <ul>
+              {cart.map((product) => {
+                return (
+                  <li key={product.idCart}>
+                    <div>
+                      <img src={product.img} alt="" />
+                    </div>
+                    <div>
+                      <p>{product.name}</p>
+                    </div>
+                    <div>
+                      <AddSubQuantityWrapper>
+                        <div
+                          onClick={() => dispatch(removeFromCartThunk(product))}
+                        >
+                          <RiSubtractFill />
+                        </div>
+                        <div>{product.quantity}</div>
+                        <div onClick={() => dispatch(addToCartThunk(product))}>
+                          <RiAddFill />
+                        </div>
+                      </AddSubQuantityWrapper>
+                    </div>
+                    <div>
+                      <span>
+                        {formatValue(product.price * product.quantity)}
+                      </span>
+                    </div>
+                    <div
+                      onClick={() =>
+                        dispatch(removeAllFromCartThunk(product.id))
+                      }
+                    >
+                      <RiCloseFill size={22} />
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </ListWrapper>
       </CartListWrapper>
       <SummaryWrapper>
         <h3>Resumo do pedido</h3>
         <div>
-          <span>{totalItems} {`ITEM${totalItems > 1 ? "S" : ""}`}</span>
+          <span>
+            {totalItems} {`ITEM${totalItems > 1 ? "S" : ""}`}
+          </span>
           <span>{formatValue(totalPrice)}</span>
         </div>
         <div>

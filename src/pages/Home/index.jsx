@@ -1,7 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
+
 import Carrosel from "../../components/Carrosel";
 import Product from "../../components/Product";
+
 import { HomeContainer, ProductsListWrapper } from "./styles";
 
 function Home() {
