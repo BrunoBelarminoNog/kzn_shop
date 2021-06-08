@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+<p align="center">
+  <img alt="KZN Shop" src="./src/assets/kenzie-shop-brunobelarminonog.vercel.app_.png" />
+</p>
+<br>
+<hr>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="center">
+  Projeto: KZN Shop
+</h2>
+<br>
 
-## Available Scripts
+<blockquote align="center">“Algumas pessoas sonham com o sucesso. Enquanto isso outras acordam e trabalham duro para isso.”
 
-In the project directory, you can run:
+(Mark Zuckerberg)</blockquote>
+<br>
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  <a href="LICENSE">
+    <img alt="LICENSE" src="https://img.shields.io/npm/l/express">
+  </a>
+  <a href="NPM">
+    <img alt="NPM" src="https://img.shields.io/npm/v/npm">
+  </a>
+  <a href="GitHub followers">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/BrunoBelarminoNog?style=social">
+  </a>
+</p>
+<hr>
+<br>
+<br>
 
-### `yarn test`
+# :rocket: Sobre o projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O KNZ Shop é um protótipo de e-commerce realizado com a intenção de treinar mais sobre a construção de aplicações em ReactJS com Redux. 
 
-### `yarn build`
+**O KNZ Shop é um projeto realizado dentro do curso de desenvolvimento full-stack da Kenzie Academy Brasil.**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :computer: Tecnologias utilizadas
+A seguinte stack foi utilizada na construção do projeto:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ReactJS
+- Redux
+- Redux-thunk
+- Styled-components
 
-### `yarn eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :construction_worker: Instalação
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Primeiramente você precisa ter instalado o [Node.js](https://nodejs.org/en/download/), depois efetuar o clone deste repositório a partir do seguinte comando:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+git clone https://github.com/BrunoBelarminoNog/kzn_shop.git
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+URLs SSH fornecem acesso a um repositório Git via SSH, um protocolo seguro. Se você tiver uma chave SSH registrada em
+sua conta do Github, clone o projeto usando este comando:
 
-## Learn More
+```
+git clone git@github.com:BrunoBelarminoNog/kzn_shop.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Instale as dependências**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+yarn || npm install
+```
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Inicie o servidor**
 
-### Analyzing the Bundle Size
+```
+yarn start || npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+# :art: Layout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<br />
+<p align="center">
+  <img src="./src/assets/knzshop.gif" width="700px"/>
+</p>
+<br />
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+# :pushpin: Contribuindo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sinta-se à vontade para registrar um novo problema com o respectivo título e descrição no repositório KZN Shop . Se você já encontrou uma solução para o problema, eu adoraria revisar sua solicitação de pull!
+
+Verifique a página de contribuição para ver os melhores lugares para registrar problemas, iniciar discussões e começar a contribuir.
+
+
+# :unlock: Licença
+Lançado em 2021. Este projeto está sob a licença do MIT .
+
+Feito com muita dedicação por Bruno Belarmino :zap:
+
+Me siga nas redes! [LinkdIn](https://www.linkedin.com/in/bruno-belarmino-nog/)
